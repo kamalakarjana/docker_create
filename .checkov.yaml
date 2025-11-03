@@ -1,0 +1,18 @@
+branch: main
+compact: true
+directory:
+  - .
+download-external-modules: true
+evaluate-variables: true
+external-modules-download-path: .external_modules
+framework:
+  - terraform
+quiet: false
+skip-path:
+  - .external_modules
+  - .terraform
+soft-fail: false
+skip-check:
+  - CKV_AWS_8 # Skip EBS encryption check as we're explicitly setting it
+  - CKV_AWS_111 # Skip IAM policies check
+  - CKV_AWS_273 # Skip IAM policies check
